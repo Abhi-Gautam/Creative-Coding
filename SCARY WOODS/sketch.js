@@ -10,6 +10,7 @@ function setup() {
     createCanvas(canvasSize, canvasSize);
     frameRate(30);
     noStroke();
+    colorMode(HSB, 1);
     let objectNum = 30;
     let rMax = width / 1.3 * random(0.2, 1);
     let yGap = height / objectNum / 1.5;
@@ -40,7 +41,7 @@ class Arc {
         this.centY = yGap * (objectNum - obj_i) - height / 3;
         this.objectNum = objectNum;
         this.rMax = rMax;
-        this.color = color(random(100, 200), random(100, 200), random(150, 255), 255);
+        this.color = color(random(0, 1), 0.8, 1, .75);
         this.obj_i = obj_i;
         this.divideNum = divideNum;
         this.noiseSeedRad = noiseSeedRad;
@@ -59,7 +60,7 @@ class Arc {
         this.noiseSeedT += this.noiseSpeedT;
         fill(this.color);
         drawingContext.shadowColor = color(0);
-        drawingContext.shadowBlur = width / 8;
+        drawingContext.shadowBlur = width / 20;
         drawingContext.shadowOffsetY = width / 32;
         let sumNoiseVal = 0;
         for (let i = 0; i < this.divideNum; i++) {
@@ -77,8 +78,8 @@ class Arc {
             if (tgt_i >= this.divideNum) { tgt_i -= this.divideNum; }
             currentNoiseVal += noise(this.noiseSeedAng + tgt_i * this.noiseStepAng) * 3;
             let maxAng = 2 * PI * currentNoiseVal / sumNoiseVal + 2 * PI;
-            let rx = this.rMax * (noise(this.noiseSeedRad + tgt_i * this.noiseStepRad, this.noiseSeedT) + this.rOffset) ** d * cos(maxAng);
-            let ry = this.rMax * (noise(this.noiseSeedRad + tgt_i * this.noiseStepRad, this.noiseSeedT) + this.rOffset) ** d * sin(maxAng) / 2.5;
+            let rx = this.rMax * (noise(this.noiseSeedRad + tgt_i * this.noiseStepRad, this.noiseSeedT) + this.rOffset) ** d * cos(maxAng)/1.5;
+            let ry = this.rMax * (noise(this.noiseSeedRad + tgt_i * this.noiseStepRad, this.noiseSeedT) + this.rOffset) ** d * sin(maxAng)/1.5;
             if (tgt_i == 0) {
                 rx_0 = rx;
                 ry_0 = ry;
