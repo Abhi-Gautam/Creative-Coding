@@ -1,12 +1,12 @@
 # ***Creative-Coding***
 
 
-## *These are some of the mini-projects that I did during learning about p5.js. All of them are animations but I am uploading their screenshots. Let's check them out one by one.*
+## *These are some of the mini-projects that I did during learning about p5.js.*
 
 <ins> ***Make sure you have live server on your VSCode or Atom for easy viewing*** </ins>
 
 
-**1. MATRIX** - *Classic green screen scene from the movie MATRIX, tried to be as accurate to the original inspiration*
+<!-- **1. MATRIX** - *Classic green screen scene from the movie MATRIX, tried to be as accurate to the original inspiration*
 
 ![](SCREENSHOTS/matrix.png)
 
@@ -38,4 +38,4 @@
 
 **Visualization of Concepts of Inertia and Attractive Forces:-** *Mouse press and drag to move particles*
 
-![](SCREENSHOTS/sands.png)
+![](SCREENSHOTS/sands.png) -->
