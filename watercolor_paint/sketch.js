@@ -1,9 +1,12 @@
 brushes = [];
+leaves = 2;
+
+
 
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
     background(255);
-    for(let i = 0; i < 50; i++)
+    for(let i = 0; i < 15; i++)
     {
         brushes.push(new Brush());
     }
@@ -21,7 +24,7 @@ class Brush {
         this.y = random(height);
         this.clr = color(random(255), random(255), random(255), 15);
         this.components = [];
-        for(let i = 0; i < 2; i++) this.components.push(random(1, 5));
+        for(let i = 0; i < leaves; i++) this.components.push(random(1, 5));
     }
 
     paint() {
@@ -30,7 +33,7 @@ class Brush {
         let x1 = this.x;
         let y1 = this.y;
 
-        let u = random(0.5, 1);
+        let u = random(0.5, 0.6);
 
         fill(this.clr);
         noStroke();
@@ -41,7 +44,7 @@ class Brush {
             x1 = this.x + r * cos(this.angle + a) * u * v;
             y1 = this.y + r * sin(this.angle + a) * u * v;
             a += PI / 180;
-            for (let i = 0; i < 2; i++) {
+            for (let i = 0; i < leaves; i++) {
                 r += sin(a * this.components[i]);
             }
         }
@@ -51,8 +54,8 @@ class Brush {
             this.angle += HALF_PI;
         }
 
-        this.x += 2 * cos(this.angle);
-        this.y += 2 * sin(this.angle);
+        this.x += 2*cos(this.angle);
+        this.y += 2*sin(this.angle);
         this.angle += random(-0.15, 0.15);
     }
 }
