@@ -1,13 +1,7 @@
 let _aryObjects = [];
 
 function setup() {
-    let canvasSize;
-    if (windowWidth <= windowHeight) {
-        canvasSize = windowWidth;
-    } else {
-        canvasSize = windowHeight;
-    }
-    createCanvas(canvasSize, canvasSize);
+    createCanvas(window.innerWidth, window.innerHeight);
     frameRate(30);
     noStroke();
     colorMode(HSB, 1);
