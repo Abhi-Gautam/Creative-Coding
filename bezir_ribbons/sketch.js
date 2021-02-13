@@ -11,11 +11,11 @@ function setup() {
     background(262, 100, 17);
     noFill();
     let t = 0;
-    palette = [color(274, 51, 100, 35), color(10, 35, 100, 30), color(151, 28, 70, 30)]
+    palette = [color(274, 51, 100, 35), color(10, 35, 100, 10), color(151, 28, 70, 15)]
     let x = [-20, -100, -10, -105];
     // ribbons.push(new Ribbon(palette[0], height/2, x, 150, 10, 0.2, 0.003));
-    ribbons.push(new Ribbon(palette[1], height/2, x, 100, 8, 0.5, 0.006));
-    ribbons.push(new Ribbon(palette[2], height, x, 200, 9, 0.4, 0.004));
+    // ribbons.push(new Ribbon(palette[1], height/2, x, 100, 8, 0.5, 0.002));
+    ribbons.push(new Ribbon(palette[2], height, x, 200, 9, 1, 0.005));
 
 }
 
