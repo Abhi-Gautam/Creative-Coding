@@ -23,7 +23,8 @@ function draw() {
     rotate(PI);
     for (let i = n; i > 0; i--) {
         let alpha = 1 - noiseProg(i / n);
-        fill((alpha / 5 + 0.5) % 1, 1, 1, alpha);
+        //Change color of the heart here
+        fill((alpha / 5 + 0.3) % 1, 1, 1, alpha);
         let size = radius + i * inter;
         let k = kMax * sqrt(i / n);
         let noisiness = maxNoise * noiseProg(i / n);
