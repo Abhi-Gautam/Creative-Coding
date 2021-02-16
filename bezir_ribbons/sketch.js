@@ -11,11 +11,16 @@ function setup() {
     background(262, 100, 17);
     noFill();
     let t = 0;
-    palette = [color(274, 51, 100, 35), color(10, 35, 100, 10), color(151, 28, 70, 15)]
+    palette1 = [color(274, 51, 100, 35), color(10, 35, 100, 10), color(173, 73, 62, 25)]
+    palette2 = [color(43, 55, 91, 45), color(27, 60, 96, 20), color(9, 18, 99, 20)]
     let x = [-20, -100, -10, -105];
-    // ribbons.push(new Ribbon(palette[0], height/2, x, 150, 10, 0.2, 0.003));
-    // ribbons.push(new Ribbon(palette[1], height/2, x, 100, 8, 0.5, 0.002));
-    ribbons.push(new Ribbon(palette[2], height, x, 200, 9, 1, 0.005));
+    ribbons.push(new Ribbon(palette1[0], 1.5*height, x, 50, 17, 0.8, 0.001));
+    // ribbons.push(new Ribbon(palette1[1], 1.5*height, x, 50, 17, 0.8, 0.002));
+    ribbons.push(new Ribbon(palette1[2], height, x, 50, 17, 0.8, 0.003));
+    // ribbons.push(new Ribbon(palette2[0], height, x, 25, 15, 0.6, 0.004));
+    ribbons.push(new Ribbon(palette2[1], height/2, x, 30, 20, 0.6, 0.005));
+    // ribbons.push(new Ribbon(palette2[2], 0, x, 30, 20, 0.8, 0.006));
+
 
 }
 
@@ -47,8 +52,8 @@ class Ribbon {
 
         var y1 = (this.ypos + this.lenght) * noise(this.t + 5);
         var y2 = (this.ypos + this.lenght) * noise(this.t + 5);
-        var y3 = this.ypos * noise(this.t + 35);
-        var y4 = this.ypos * noise(this.t + 45);
+        var y3 = this.ypos * noise(this.t + 10);
+        var y4 = this.ypos * noise(this.t + 15);
 
         for(let i = 0; i < 4; i++){
             this.x[i] += this.speed;
