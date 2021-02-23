@@ -1,14 +1,14 @@
 let maxTime = 800;
-let strokesPerFrame = 50;
+let strokesPerFrame = 30;
 // let imgList = ['Results/me1.jpg', 'Results/me2.jpg', 'Results/me3.jpg', 'Results/me4.jpg'];
-let imgList = ['Results/me4.jpg'];
+let imgList = ['Results/s5.jpeg'];
 
 let img;
 let brightnessShift;
 let imgIndex = -1;
 
 function setup() {
-    createCanvas(950, 700);
+    createCanvas(800, 1200);
     colorMode(HSB, 255);
     reset();
 }
