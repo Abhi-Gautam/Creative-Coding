@@ -30,10 +30,10 @@ function draw () {
 
         if(i%2){
             fill(0, 1-alpha);
-            stroke(0.99, 1, 1, 0.8);
+            stroke(0.66, 1, 1, 0.8);
         }
         else{
-            fill(0.99, 1, 1, 0.8);
+            fill(0.66, 1, 1, 0.8);
             stroke(0, 0.8);
         }
 
