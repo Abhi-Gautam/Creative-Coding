@@ -7,4 +7,6 @@
 
 ### *Regularly updated with new sketches*
 
+![1](https://ibb.co/ypVSNyN)
+
 [View Some of the sketches by clicking here](https://www.youtube.com/watch?v=w_59Tq_chHQ)
