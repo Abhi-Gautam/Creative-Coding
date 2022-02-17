@@ -1,7 +1,7 @@
 # ***Creative-Coding***
 
 
-## *These are some of the mini-projects that I did during learning about p5.js.*
+## *These are some of the sketches that I made/edited(from openprocessing) during learning about p5.js.*
 
 <ins> ***Make sure you have live server on your VSCode or Atom for easy viewing*** </ins>
 
